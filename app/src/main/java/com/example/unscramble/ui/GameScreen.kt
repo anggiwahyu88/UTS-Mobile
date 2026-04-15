@@ -16,6 +16,7 @@
 package com.example.unscramble.ui
 
 import android.app.Activity
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -113,6 +114,20 @@ fun GameScreen(gameViewModel: GameViewModel = viewModel()) {
             ) {
                 Text(
                     text = stringResource(R.string.skip),
+                    fontSize = 16.sp
+                )
+            }
+//            Toast.makeText(this, "berhsil menambhkan tekt", Toast.LENGTH_SHORT)
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = {
+                    gameViewModel.addWord();
+//                    Toast.makeText(, "berhsil menambhkan tekt", Toast.LENGTH_SHORT).show()
+                }
+            ) {
+                Text(
+                    text = "Tambah",
                     fontSize = 16.sp
                 )
             }

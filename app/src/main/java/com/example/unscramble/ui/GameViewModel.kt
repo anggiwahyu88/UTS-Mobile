@@ -27,6 +27,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlin.reflect.typeOf
 
 /**
  * ViewModel containing the app data and methods to process the data
@@ -83,6 +84,9 @@ class GameViewModel : ViewModel() {
         updateUserGuess("")
     }
 
+    fun addWord(){
+        allWords[0] = userGuess
+    }
     /*
      * Skip to next word
      */
